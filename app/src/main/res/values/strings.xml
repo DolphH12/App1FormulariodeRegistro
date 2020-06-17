@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="titulo">Formulario de Registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="identificacion">ID</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="repita_contrasena">Repita Contraseña</string>
+    <string name="guardar">Guardar</string>
+    <string name="error_contrasenas">Las contraseñas no son iguales</string>
+    <string name="genero">Genero</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="pasatiempos">Pasatiempos</string>
+    <string name="cine">Cine</string>
+    <string name="videojuegos">VideoJuegos</string>
+    <string name="series">Series</string>
+    <string name="ciudad">Ciudad de Nacimiento</string>
+    <string name="fecha_nacimiento">dd/MM/yy</string>
+    <string name="text_nacimiento">Fecha de Nacimiento</string>
+    <string name="deportes">Deportes</string>
+
+    <string-array name="lista_ciudades">
+        <item>Medellin</item>
+        <item>Bogota</item>
+        <item>Cali</item>
+        <item>Barranquilla</item>
+    </string-array>
+</resources>
