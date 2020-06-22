@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        Log.d("OnCreate", "ok")
 
         val dateSetListener =
             DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
@@ -58,19 +62,19 @@ class MainActivity : AppCompatActivity() {
 
 
             if(nombre.isEmpty()){
-                tv_result.text = "\n Campo Nombre Vacio \n"
+                Toast.makeText(this, "Campo Nombre Vacio", Toast.LENGTH_LONG).show()
             }
             else if (correo.isEmpty() || "@" !in correo){
-                tv_result.text = "\n Campo Correo Invalido \n"
+                Toast.makeText(this, "Campo Correo Invalido", Toast.LENGTH_LONG).show()
             }
             else if (contrasena.isEmpty()){
-                tv_result.text = "\n Campo Contraseña Vacio \n"
+                Toast.makeText(this, "Campo Contraseña Vacio", Toast.LENGTH_LONG).show()
             }
             else if (repContra.isEmpty()){
-                tv_result.text = "\n Campo Repetir Contraseña Vacio \n"
+                Toast.makeText(this, "Campo Rep Contraseña Vacio", Toast.LENGTH_LONG).show()
             }
             else if (fechanaci == "dd/MM/yy"){
-                tv_result.text = "\n Campo Fecha Vacio \n"
+                Toast.makeText(this, "Campo Fecha Vacio", Toast.LENGTH_LONG).show()
             }
             else {
                 if (contrasena == repContra){
@@ -82,15 +86,11 @@ class MainActivity : AppCompatActivity() {
                             "\nPasatiempos:$pasatiempos \n"
                 }
                 else{
-                    tv_result.text = "\n" + getString(R.string.error_contrasenas) + "\n"
+                    Toast.makeText(this, "Contraseñas diferentes", Toast.LENGTH_LONG).show()
                 }
             }
 
         }
 
     }
-
-    //fun onCalendarioButtonClicked(view: View) {}
-
-
 }
